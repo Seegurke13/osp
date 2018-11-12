@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc2f1af3-f5da-4e00-9f42-8bcd2b8d4289" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/index/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/green-cms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/green-cms.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.bat" beforeDir="false" afterPath="$PROJECT_DIR$/composer.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProtocolController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/console.bat" beforeDir="false" afterPath="$PROJECT_DIR$/console.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,12 +38,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="bat" value="7" />
+          <entry key="bat" value="9" />
           <entry key="console" value="1" />
           <entry key="env" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="json" value="7" />
-          <entry key="php" value="19" />
+          <entry key="json" value="9" />
+          <entry key="php" value="27" />
+          <entry key="twig" value="3" />
           <entry key="yaml" value="3" />
         </counts>
       </usages-collector>
@@ -50,10 +52,11 @@
         <counts>
           <entry key=".env file" value="1" />
           <entry key="Git file" value="1" />
-          <entry key="PHP" value="20" />
-          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="PHP" value="28" />
+          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="Twig" value="3" />
           <entry key="YAML" value="3" />
-          <entry key="composer.json" value="7" />
+          <entry key="composer.json" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -61,17 +64,20 @@
           <entry key="bat" value="119" />
           <entry key="env" value="15" />
           <entry key="gitignore" value="4" />
-          <entry key="json" value="198" />
-          <entry key="php" value="1171" />
+          <entry key="json" value="244" />
+          <entry key="php" value="1198" />
+          <entry key="twig" value="63" />
+          <entry key="txt" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="15" />
           <entry key="Git file" value="4" />
-          <entry key="PHP" value="1171" />
-          <entry key="PLAIN_TEXT" value="119" />
-          <entry key="composer.json" value="198" />
+          <entry key="PHP" value="1198" />
+          <entry key="PLAIN_TEXT" value="138" />
+          <entry key="Twig" value="63" />
+          <entry key="composer.json" value="244" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.actions">
@@ -93,10 +99,55 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/ProtocolController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="103">
+              <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Form/ProtocolType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Protocol.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="67" lean-forward="true" selection-start-column="67" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/console.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="80" selection-start-column="80" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+            <state relative-caret-position="122">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding>
                 <element signature="e#120#177#0#PHP" expanded="true" />
               </folding>
@@ -104,14 +155,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Service/ProtocolService.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-              <folding>
-                <element signature="e#117#141#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pma/config.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -131,17 +188,21 @@
         <option value="$PROJECT_DIR$/src/Entity/ProtocolVersion.php" />
         <option value="$PROJECT_DIR$/bin/console.bat" />
         <option value="$PROJECT_DIR$/update.bat" />
-        <option value="$PROJECT_DIR$/composer.bat" />
-        <option value="$PROJECT_DIR$/console.bat" />
         <option value="$PROJECT_DIR$/src/Serializer/ProtocolSerializer.php" />
         <option value="$PROJECT_DIR$/src/Service/PersonService.php" />
         <option value="$PROJECT_DIR$/src/Service/ProtocolService.php" />
         <option value="$PROJECT_DIR$/config/packages/validator.yaml" />
         <option value="$PROJECT_DIR$/src/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/src/Repository/ProtocolRepository.php" />
-        <option value="$PROJECT_DIR$/src/Controller/ProtocolController.php" />
         <option value="$PROJECT_DIR$/src/Entity/Protocol.php" />
+        <option value="$PROJECT_DIR$/src/Controller/ProtocolVersionController.php" />
+        <option value="$PROJECT_DIR$/templates/index/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/ProtocolController.php" />
+        <option value="$PROJECT_DIR$/src/Form/ProtocolType.php" />
+        <option value="$PROJECT_DIR$/console.bat" />
+        <option value="$PROJECT_DIR$/composer.bat" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/pma/config.inc.php" />
       </list>
     </option>
   </component>
@@ -221,9 +282,8 @@
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
       <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -248,6 +308,16 @@
             <path>
               <item name="green-cms" type="b2602c69:ProjectViewProjectNode" />
               <item name="green-cms" type="462c0819:PsiDirectoryNode" />
+              <item name="pma" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="green-cms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="green-cms" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="green-cms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="green-cms" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -268,6 +338,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Form" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="green-cms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="green-cms" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -279,7 +354,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="diff.external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -308,12 +383,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542029064593</updated>
-      <workItem from="1542029066491" duration="14167000" />
+      <workItem from="1542029066491" duration="19528000" />
     </task>
+    <task id="LOCAL-00001" summary="wip&#10;add aaactions">
+      <created>1542056009985</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1542056009986</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14167000" />
+    <option name="totallyTimeSpent" value="19528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -325,10 +408,10 @@
       <window_info anchor="bottom" id="Docker" weight="0.3291815" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49959514" visible="true" weight="0.30604982" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.49959514" visible="true" weight="0.2758007" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.50040483" side_tool="true" weight="0.33451957" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3291815" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -350,6 +433,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="wip&#10;add aaactions" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip&#10;add aaactions" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.env">
@@ -399,20 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/console.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="100" selection-start-column="100" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="107" selection-start-column="107" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Serializer/ProtocolSerializer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -446,45 +517,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-          <folding>
-            <element signature="e#120#177#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ProtocolController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-          <folding>
-            <element signature="e#120#144#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/ProtocolVersion1Type.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ProtocolVersionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding>
-            <element signature="e#34#65#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Protocol.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/ProtocolVersion.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -510,23 +544,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/ProtocolType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Service/ProtocolService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
+        <state relative-caret-position="476">
           <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding>
             <element signature="e#117#141#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ProtocolVersionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="15" column="50" lean-forward="true" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+          <folding>
+            <element signature="e#34#65#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/protocol/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ProtocolController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/ProtocolType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="e#120#177#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Protocol.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="80" selection-start-column="80" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="67" lean-forward="true" selection-start-column="67" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pma/setup/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-527" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pma/setup/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-885" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pma/config.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
         </state>
       </provider>
     </entry>

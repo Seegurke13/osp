@@ -17,8 +17,8 @@ $cfg['Servers'][$i]['host'] = '192.168.99.100';
 $cfg['Servers'][$i]['port'] = 32809;
 $cfg['Servers'][$i]['socket'] = '';
 $cfg['Servers'][$i]['auth_type'] = 'config';
-$cfg['Servers'][$i]['user'] = 'root';
-$cfg['Servers'][$i]['password'] = 'welli13';
+$cfg['Servers'][$i]['user'] = 'osp';
+$cfg['Servers'][$i]['password'] = 'osp';
 $cfg['Servers'][$i]['pmadb'] = 'green';
 
 /* End of servers configuration */

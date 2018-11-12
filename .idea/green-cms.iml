@@ -60,8 +60,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/property-access" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/routing" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/security-core" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/security-csrf" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/security" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/translation" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/twig-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/twig-bundle" />
