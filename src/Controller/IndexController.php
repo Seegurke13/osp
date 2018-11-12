@@ -9,9 +9,20 @@
 namespace App\Controller;
 
 
-class IndexController
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Routing\Annotation\Route;
+
+class IndexController extends Controller
 {
     public function __construct()
     {
+    }
+
+    /**
+     * @Route("/")
+     */
+    public function indexAction()
+    {
+        return $this->json('test');
     }
 }
