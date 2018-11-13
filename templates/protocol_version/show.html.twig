@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProtocolVersion{% endblock %}
+
+{% block body %}
+    <h1>ProtocolVersion</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ protocol_version.id }}</td>
+            </tr>
+            <tr>
+                <th>Version</th>
+                <td>{{ protocol_version.version }}</td>
+            </tr>
+            <tr>
+                <th>ChangeAt</th>
+                <td>{{ protocol_version.changeAt ? protocol_version.changeAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('protocol_version_index') }}">back to list</a>
+
+    <a href="{{ path('protocol_version_edit', {'id': protocol_version.id}) }}">edit</a>
+
+    {{ include('protocol_version/_delete_form.html.twig') }}
+{% endblock %}

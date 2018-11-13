@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ProtocolVersion{% endblock %}
+
+{% block body %}
+    <h1>Create new ProtocolVersion</h1>
+
+    {{ include('protocol_version/_form.html.twig') }}
+
+    <a href="{{ path('protocol_version_index') }}">back to list</a>
+{% endblock %}

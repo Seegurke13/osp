@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProtocolVersion index{% endblock %}
+
+{% block body %}
+    <h1>ProtocolVersion index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Version</th>
+                <th>ChangeAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for protocol_version in protocol_versions %}
+            <tr>
+                <td>{{ protocol_version.id }}</td>
+                <td>{{ protocol_version.version }}</td>
+                <td>{{ protocol_version.changeAt ? protocol_version.changeAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('protocol_version_show', {'id': protocol_version.id}) }}">show</a>
+                    <a href="{{ path('protocol_version_edit', {'id': protocol_version.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('protocol_version_new') }}">Create new</a>
+{% endblock %}
