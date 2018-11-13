@@ -30,7 +30,10 @@ security:
                 - App\Security\AppAuthenticator
             logout:
                 path: app_logout
-
+            remember_me:
+                secret:   '%kernel.secret%'
+                lifetime: 604800 # 1 week in seconds
+                path:     /
             # activate different ways to authenticate
 
             # http_basic: true
