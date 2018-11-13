@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -9,6 +10,15 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Protocol
 {
+    public function __construct()
+    {
+        $this->protocolContent = new ArrayCollection();
+        $this->protocolVersions = new ArrayCollection();
+        $this->tags = new ArrayCollection();
+
+        $this->creator = -1;
+    }
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -26,8 +36,15 @@ class Protocol
      */
     private $createAt;
 
+    /**
+     * @var int
+     * @ORM\Column(type="integer")
+     */
     private $creator;
 
+    /**
+     * @var array
+     */
     private $participants;
 
     /**
@@ -35,6 +52,12 @@ class Protocol
      * @var array
      */
     private $tags;
+
+    /**
+     * @var array
+     * @ORM\OneToMany(targetEntity="ProtocolContent", mappedBy="protocol")
+     */
+    private $protocolContent;
 
     /**
      * @var array
@@ -80,10 +103,79 @@ class Protocol
     }
 
     /**
-     * @param array $protcolVersions
+     * @param array $protocolVersions
      */
     public function setProtocolVersions(array $protocolVersions): void
     {
         $this->protocolVersions = $protocolVersions;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getTags(): ArrayCollection
+    {
+        return $this->tags;
+    }
+
+    /**
+     * @param ArrayCollection $tags
+     */
+    public function setTags(ArrayCollection $tags): void
+    {
+        $this->tags = $tags;
+    }
+
+    /**
+     * @return array
+     */
+    public function getParticipants(): array
+    {
+        return $this->participants;
+    }
+
+    /**
+     * @param array $participants
+     */
+    public function setParticipants(array $participants): void
+    {
+        $this->participants = $participants;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCreator(): int
+    {
+        return $this->creator;
+    }
+
+    /**
+     * @param int $creator
+     */
+    public function setCreator(int $creator): void
+    {
+        $this->creator = $creator;
+    }
+
+    /**
+     * @return array
+     */
+    public function getProtocolContent(): array
+    {
+        return $this->protocolContent;
+    }
+
+    /**
+     * @param array $protocolContent
+     */
+    public function setProtocolContent(array $protocolContent): void
+    {
+        $this->protocolContent = $protocolContent;
+    }
+
+    public function addProtocolContent(ProtocolContent $protocolContent)
+    {
+        $this->protocolContent[] = $protocolContent;
     }
 }

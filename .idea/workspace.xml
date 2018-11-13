@@ -2,7 +2,128 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce825339-617a-44e8-bb16-7518a6dc3af2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/fpdf/FAQ.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/FPDF.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/changelog.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/__construct.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/acceptpagebreak.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/addfont.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/addlink.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/addpage.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/aliasnbpages.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/cell.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/close.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/error.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/footer.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/getpageheight.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/getpagewidth.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/getstringwidth.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/getx.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/gety.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/header.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/image.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/line.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/link.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/ln.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/multicell.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/output.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/pageno.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/rect.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setauthor.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setautopagebreak.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setcompression.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setcreator.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setdisplaymode.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setdrawcolor.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setfillcolor.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setfont.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setfontsize.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setkeywords.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setleftmargin.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setlinewidth.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setlink.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setmargins.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setrightmargin.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setsubject.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/settextcolor.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/settitle.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/settopmargin.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setx.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/setxy.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/sety.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/text.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/doc/write.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/font/courier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/font/courierb.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/font/courierbi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/font/courieri.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/font/helvetica.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/font/helveticab.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/font/helveticabi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/font/helveticai.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/font/symbol.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/font/times.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/font/timesb.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/font/timesbi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/font/timesi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/font/zapfdingbats.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/fpdf.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/install.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/license.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/cp1250.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/cp1251.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/cp1252.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/cp1253.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/cp1254.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/cp1255.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/cp1257.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/cp1258.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/cp874.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-1.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-11.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-15.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-16.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-2.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-4.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-5.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-7.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/iso-8859-9.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/koi8-r.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/koi8-u.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/makefont.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/makefont/ttfparser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/20k_c1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/20k_c2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/calligra.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/calligra.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/calligra.z" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/countries.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/makefont.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto1.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto2.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto3.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto3.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto4.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto5.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto5.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto6.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto6.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto7.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fpdf/tutorial/tuto7.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pdf/ProtocolPdf.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/green-cms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/green-cms.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Protocol.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Protocol.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/ProtocolVersion.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ProtocolVersion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ProtocolType.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,25 +176,29 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="bat" value="3" />
-          <entry key="json" value="2" />
-          <entry key="php" value="13" />
+          <entry key="htm" value="1" />
+          <entry key="json" value="3" />
+          <entry key="php" value="26" />
           <entry key="twig" value="1" />
-          <entry key="yaml" value="5" />
+          <entry key="yaml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Bat" value="3" />
-          <entry key="PHP" value="13" />
+          <entry key="HTML" value="1" />
+          <entry key="PHP" value="26" />
           <entry key="Twig" value="1" />
-          <entry key="YAML" value="5" />
-          <entry key="composer.json" value="2" />
+          <entry key="YAML" value="6" />
+          <entry key="composer.json" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="bat" value="6" />
-          <entry key="php" value="452" />
+          <entry key="dummy" value="4" />
+          <entry key="json" value="76" />
+          <entry key="php" value="1216" />
           <entry key="twig" value="6" />
           <entry key="txt" value="3" />
           <entry key="yaml" value="133" />
@@ -82,15 +207,16 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bat" value="6" />
-          <entry key="PHP" value="452" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="PHP" value="1216" />
+          <entry key="PLAIN_TEXT" value="7" />
           <entry key="Twig" value="6" />
           <entry key="YAML" value="133" />
+          <entry key="composer.json" value="76" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="1" />
+          <entry key="PHP Class.type" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -98,27 +224,49 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
+        <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+            <state relative-caret-position="85">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Protocol.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="121" column="21" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
               <folding>
-                <element signature="e#120#177#0#PHP" expanded="true" />
+                <element signature="e#30#78#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/ProtocolController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            <state relative-caret-position="-157" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Form/ProtocolType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>FPDF</find>
+      <find>class</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -134,9 +282,18 @@
         <option value="$PROJECT_DIR$/src/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/templates/index/index.html.twig" />
         <option value="$PROJECT_DIR$/src/DataFixtures/ProtocolWithVersionFixtures.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Protocol.php" />
         <option value="$PROJECT_DIR$/src/Controller/SearchController.php" />
+        <option value="$PROJECT_DIR$/fpdf/fpdf.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/pdf/ProtocolPdf.php" />
+        <option value="$PROJECT_DIR$/src/pdf/ProtocolPdf.php" />
+        <option value="$PROJECT_DIR$/src/Controller/PdfController.php" />
         <option value="$PROJECT_DIR$/src/Controller/SecurityController.php" />
+        <option value="$PROJECT_DIR$/src/Pdf/ProtocolPdf.php" />
+        <option value="$PROJECT_DIR$/src/Entity/ProtocolVersion.php" />
+        <option value="$PROJECT_DIR$/src/Entity/ProtocolContent.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Protocol.php" />
+        <option value="$PROJECT_DIR$/src/Form/ProtocolType.php" />
       </list>
     </option>
   </component>
@@ -223,11 +380,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/profiler-pack" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-17" />
-    <option name="y" value="1" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-11" />
     <option name="width" value="1946" />
-    <option name="height" value="1080" />
+    <option name="height" value="1064" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -263,13 +419,14 @@
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -284,7 +441,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\src" />
       <recent name="D:\xampp\htdocs\public" />
     </key>
   </component>
@@ -312,7 +473,7 @@
       <updated>1542020862052</updated>
       <workItem from="1542020864017" duration="4117000" />
       <workItem from="1542067185443" duration="165000" />
-      <workItem from="1542067498941" duration="8440000" />
+      <workItem from="1542067498941" duration="19552000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <created>1542095669618</created>
@@ -325,17 +486,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12722000" />
+    <option name="totallyTimeSpent" value="23834000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="1" width="1297" height="720" extended-state="0" />
+    <frame x="-7" y="0" width="1297" height="709" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25788197" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49867374" weight="0.25788197" />
+      <window_info id="Structure" order="1" sideWeight="0.50132626" side_tool="true" weight="0.25788197" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.328125" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -344,13 +505,34 @@
       <window_info anchor="bottom" id="Docker" order="7" weight="0.3291815" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.35775128" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.42708334" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49867374" visible="true" weight="0.25788197" />
+      <window_info id="Structure" order="1" sideWeight="0.50132626" side_tool="true" weight="0.25788197" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.328125" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" weight="0.3291815" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.42708334" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -374,13 +556,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.bat">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Security/AppAuthenticator.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -443,13 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Protocol.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-781">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataFixtures/ProtocolWithVersionFixtures.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -460,10 +628,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_classmap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fpdf/doc/ln.htm">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-155" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        <state relative-caret-position="175">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#120#177#0#PHP" expanded="true" />
           </folding>
@@ -472,8 +656,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/SecurityController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        <state relative-caret-position="136">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fpdf/FPDF.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding>
+            <element signature="e#6#578#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/User.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pdf/ProtocolPdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/PdfController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding>
+            <element signature="e#34#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/ProtocolVersion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/ProtocolContent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ProtocolVersionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-648" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ProtocolController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-157" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Protocol.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="121" column="21" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/ProtocolType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
         </state>
       </provider>
     </entry>

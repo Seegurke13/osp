@@ -66,4 +66,52 @@ class ProtocolVersion
 
         return $this;
     }
+
+    /**
+     * @return Protocol
+     */
+    public function getProtocol(): Protocol
+    {
+        return $this->protocol;
+    }
+
+    /**
+     * @param Protocol $protocol
+     */
+    public function setProtocol(Protocol $protocol): void
+    {
+        $this->protocol = $protocol;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMeetingpoints(): string
+    {
+        return $this->meetingpoints;
+    }
+
+    /**
+     * @param string $meetingpoints
+     */
+    public function setMeetingpoints(string $meetingpoints): void
+    {
+        $this->meetingpoints = $meetingpoints;
+    }
+
+    /**
+     * @return string
+     */
+    public function getResults(): string
+    {
+        return $this->results;
+    }
+
+    /**
+     * @param string $results
+     */
+    public function setResults(string $results): void
+    {
+        $this->results = $results;
+    }
 }
