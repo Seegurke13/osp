@@ -11,5 +11,24 @@ namespace App\Model;
 
 class User
 {
+    /**
+     * @var string
+     */
+    private $id;
 
+    /**
+     * @return string
+     */
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param string $id
+     */
+    public function setUid(string $id): void
+    {
+        $this->id = $id;
+    }
 }

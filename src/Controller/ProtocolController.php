@@ -4,11 +4,13 @@ namespace App\Controller;
 
 use App\Entity\Protocol;
 use App\Form\ProtocolType;
+use App\Model\User;
 use App\Repository\ProtocolRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @Route("/protocol")
@@ -20,7 +22,7 @@ class ProtocolController extends Controller
      * @param ProtocolRepository $protocolRepository
      * @return Response
      */
-    public function index(ProtocolRepository $protocolRepository): Response
+    public function index(User $user, ProtocolRepository $protocolRepository): Response
     {
         return $this->render('protocol/index.html.twig', ['protocols' => $protocolRepository->findAll()]);
     }
@@ -32,6 +34,8 @@ class ProtocolController extends Controller
      */
     public function new(Request $request): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $protocol = new Protocol();
         $form = $this->createForm(ProtocolType::class, $protocol);
         $form->handleRequest($request);
@@ -69,6 +73,8 @@ class ProtocolController extends Controller
      */
     public function edit(Request $request, Protocol $protocol): Response
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         $form = $this->createForm(ProtocolType::class, $protocol);
         $form->handleRequest($request);
 

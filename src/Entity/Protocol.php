@@ -48,7 +48,7 @@ class Protocol
     private $participants;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Tag")
+     * @ORM\Column(type="array")
      * @var array
      */
     private $tags;
