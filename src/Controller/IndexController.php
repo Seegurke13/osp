@@ -19,10 +19,10 @@ class IndexController extends Controller
     }
 
     /**
-     * @Route("/")
+     * @Route("/", name="index")
      */
     public function indexAction()
     {
-        return $this->json('test');
+        return $this->render('index/index.html.twig', []);
     }
 }

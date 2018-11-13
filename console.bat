@@ -1,1 +1,1 @@
-docker exec -it a3ec9a161487ebe522e9916d5e8d3182b027203abcf2f39ded6245a53861528a /app/bin/console %*
+php ./bin/console %*
