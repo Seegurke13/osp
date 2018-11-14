@@ -1,4 +1,14 @@
 {{ form_start(form) }}
+    <div id="template-protocolVersion" class="template">
+        {{ form_widget(form.protocolContent.vars.prototype) | e }}
+    </div>
+    <div id="template-tag" class="template">
+        {{ form_widget(form.tags.vars.prototype) | e }}
+    </div>
+    <div id="template-participants" class="template">
+        {{ form_widget(form.participants.vars.prototype) | e }}
+    </div>
+
     {{ form_widget(form) }}
     <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

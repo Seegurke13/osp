@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -20,6 +21,12 @@ class Tag
      * @ORM\Column(type="string", length=255)
      */
     private $name;
+
+    /**
+     * @var ArrayCollection
+     * @ORM\OneToMany(targetEntity="Protocol", mappedBy="tags")
+     */
+    private $protocols;
 
     public function getId(): ?int
     {

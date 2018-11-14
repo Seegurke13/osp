@@ -10,15 +10,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Protocol
 {
-    public function __construct()
-    {
-        $this->protocolContent = new ArrayCollection();
-        $this->protocolVersions = new ArrayCollection();
-        $this->tags = new ArrayCollection();
-
-        $this->creator = -1;
-    }
-
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -37,8 +28,8 @@ class Protocol
     private $createAt;
 
     /**
-     * @var int
-     * @ORM\Column(type="integer")
+     * @var string
+     * @ORM\Column(type="string")
      */
     private $creator;
 
@@ -48,7 +39,7 @@ class Protocol
     private $participants;
 
     /**
-     * @ORM\Column(type="array")
+     * @ORM\ManyToOne(targetEntity="Tag", inversedBy="protocols")
      * @var array
      */
     private $tags;
@@ -59,11 +50,12 @@ class Protocol
      */
     private $protocolContent;
 
-    /**
-     * @var array
-     * @ORM\OneToMany(targetEntity="ProtocolVersion", mappedBy="protocol")
-     */
-    private $protocolVersions;
+    public function __construct()
+    {
+        $this->protocolContent = new ArrayCollection();
+        $this->tags = new ArrayCollection();
+        $this->participants = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -95,22 +87,6 @@ class Protocol
     }
 
     /**
-     * @return array
-     */
-    public function getProtocolVersions(): array
-    {
-        return $this->protocolVersions;
-    }
-
-    /**
-     * @param array $protocolVersions
-     */
-    public function setProtocolVersions(array $protocolVersions): void
-    {
-        $this->protocolVersions = $protocolVersions;
-    }
-
-    /**
      * @return ArrayCollection
      */
     public function getTags(): ArrayCollection
@@ -129,7 +105,7 @@ class Protocol
     /**
      * @return array
      */
-    public function getParticipants(): array
+    public function getParticipants(): ArrayCollection
     {
         return $this->participants;
     }
@@ -137,7 +113,7 @@ class Protocol
     /**
      * @param array $participants
      */
-    public function setParticipants(array $participants): void
+    public function setParticipants(ArrayCollection $participants): void
     {
         $this->participants = $participants;
     }
@@ -161,7 +137,7 @@ class Protocol
     /**
      * @return array
      */
-    public function getProtocolContent(): array
+    public function getProtocolContent(): ArrayCollection
     {
         return $this->protocolContent;
     }
@@ -169,7 +145,7 @@ class Protocol
     /**
      * @param array $protocolContent
      */
-    public function setProtocolContent(array $protocolContent): void
+    public function setProtocolContent(ArrayCollection $protocolContent): void
     {
         $this->protocolContent = $protocolContent;
     }

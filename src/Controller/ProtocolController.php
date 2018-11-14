@@ -22,7 +22,7 @@ class ProtocolController extends Controller
      * @param ProtocolRepository $protocolRepository
      * @return Response
      */
-    public function index(User $user, ProtocolRepository $protocolRepository): Response
+    public function index(ProtocolRepository $protocolRepository): Response
     {
         return $this->render('protocol/index.html.twig', ['protocols' => $protocolRepository->findAll()]);
     }

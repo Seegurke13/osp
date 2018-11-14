@@ -32,6 +32,12 @@ class ProtocolContent
      */
     private $result;
 
+    public function __construct()
+    {
+        $this->setName('');
+        $this->setResult('');
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -64,7 +70,7 @@ class ProtocolContent
     /**
      * @return Protocol
      */
-    public function getProtocol(): Protocol
+    public function getProtocol(): ?Protocol
     {
         return $this->protocol;
     }
