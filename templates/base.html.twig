@@ -1,13 +1,70 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {{ dump(tags) }}
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ app.request.getSchemeAndHttpHost() }}/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="{{ app.request.getSchemeAndHttpHost() }}/css/style.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="{{ app.request.getSchemeAndHttpHost() }}/js/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="{{ app.request.getSchemeAndHttpHost() }}/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ app.request.getSchemeAndHttpHost() }}/DataTables/datatables.min.css"/>
+    <script type="text/javascript" src="{{ app.request.getSchemeAndHttpHost() }}/DataTables/datatables.min.js"></script>
+    <script type="text/javascript" src="{{ app.request.getSchemeAndHttpHost() }}/js/script.js"></script>
+    <link href="{{ app.request.getSchemeAndHttpHost() }}/icofont/icofont.css" rel="stylesheet">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body class="{% block body_class %}container-fluid{% endblock %}">
+{% block main %}
+<header class="row">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 header-image-container">
+                <img class="header-image" src="/img/gso-logo.jpg" alt="logo">
+            </div>
+            <div class="col-md-6 header-title">
+                <h1 class="h1">Protokollverwaltung</h1>
+            </div>
+            <div class="col-md-4">
+                {% if app.user %}
+                    <div class="action-container">
+                        <form class="search-action" role="search">
+                            <div class="input-group">
+                                <input name="search" id="search-action-input" type="text" placeholder="Search">
+                                <button type="submit" class="btn btn-info">
+                                    <i class="icofont-ui-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <div class="add-action">
+                                <a href="{{ addUrl }}" class="btn btn-info">
+                                    <i class="icofont-ui-add"></i>
+                                </a>
+                            </div>
+                        {% endif %}
+                        <div class="logout-action">
+                            <a href="{{ logoutUrl }}" class="logout-action btn btn-info">
+                                <i class="icofont-logout"></i>
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</header>
+<div class="row">
+    {% block body %}
+    {% endblock body %}
+</div>
+
+{#<footer class="row footer">#}
+{##}
+{#</footer>#}
+{% endblock main %}
+{% block javascripts %}{% endblock %}
+</body>
 </html>

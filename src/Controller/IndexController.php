@@ -9,6 +9,7 @@
 namespace App\Controller;
 
 
+use App\Repository\ProtocolRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -22,8 +23,10 @@ class IndexController extends Controller
     /**
      * @Route("/", name="index")
      */
-    public function indexAction()
+    public function indexAction(ProtocolRepository $protocolRepository)
     {
-        return $this->render('index/index.html.twig', []);
+        $protocols = $protocolRepository->findAll();
+
+        return $this->render('index/index.html.twig', ['protocols' => $protocols]);
     }
 }

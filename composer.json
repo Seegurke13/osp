@@ -12,7 +12,8 @@
     "doctrine/annotations": "1.6.*",
     "symfony/framework-bundle": "4.1.*",
     "symfony/security-bundle": "4.1.*",
-    "symfony/ldap": "4.1.*"
+    "symfony/ldap": "4.1.*",
+    "symfony/asset": "4.1.*"
   },
   "scripts": {
     "auto-scripts": {

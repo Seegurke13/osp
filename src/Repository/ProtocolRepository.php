@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Participant;
 use App\Entity\Protocol;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Collections\Criteria;
@@ -24,6 +25,26 @@ class ProtocolRepository extends ServiceEntityRepository
     {
         $this->getEntityManager()->persist($protocol);
         $this->getEntityManager()->flush();
+    }
+
+    public function findByParcipant(Participant $participant)
+    {
+        $qb = $this->createQueryBuilder("p")
+            ->where(':parcipant MEMBER OF p.participants')
+            ->setParameters(array('parcipant' => $participant))
+        ;
+        return $qb->getQuery()->execute();
+    }
+
+    public function findProtocolsByTagAndParticipant(\App\Entity\Tag $tagE, Participant $participant)
+    {
+        $qb = $this->createQueryBuilder('protocol')
+            ->innerJoin('protocol.tags', 'tag', 'WITH', 'tag.name = :name')
+            ->innerJoin('protocol.participants', 'participant', 'WITH', 'participant = :participant')
+            ->setParameter('name', $tagE->getName())
+            ->setParameter('participant', $participant);
+
+        return $qb->getQuery()->execute();
     }
 
     // /**

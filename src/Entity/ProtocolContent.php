@@ -34,8 +34,7 @@ class ProtocolContent
 
     public function __construct()
     {
-        $this->setName('');
-        $this->setResult('');
+
     }
 
     public function getId(): ?int
@@ -60,11 +59,9 @@ class ProtocolContent
         return $this->result;
     }
 
-    public function setResult(?string $result): self
+    public function setResult(?string $result): void
     {
         $this->result = $result;
-
-        return $this;
     }
 
     /**

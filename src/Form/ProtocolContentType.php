@@ -14,7 +14,6 @@ class ProtocolContentType extends AbstractType
         $builder
             ->add('name')
             ->add('result')
-            ->add('protocol')
         ;
     }
 

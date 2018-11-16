@@ -32,7 +32,7 @@ class ProtocolController extends Controller
      * @param Request $request
      * @return Response
      */
-    public function new(Request $request): Response
+    public function new(UserInterface $user, Request $request): Response
     {
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
 
@@ -42,6 +42,7 @@ class ProtocolController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $protocol->setCreateAt(new \DateTime());
+            $protocol->setCreator($user->getUsername());
             $em = $this->getDoctrine()->getManager();
             $em->persist($protocol);
             $em->flush();
@@ -60,8 +61,10 @@ class ProtocolController extends Controller
      * @param Protocol $protocol
      * @return Response
      */
-    public function show(Protocol $protocol): Response
+    public function show(int $id): Response
     {
+        $protocol = $this->getDoctrine()->getRepository(Protocol::class)->find($id);
+
         return $this->render('protocol/show.html.twig', ['protocol' => $protocol]);
     }
 
@@ -71,9 +74,11 @@ class ProtocolController extends Controller
      * @param Protocol $protocol
      * @return Response
      */
-    public function edit(Request $request, Protocol $protocol): Response
+    public function edit(ProtocolRepository $protocolRepository, Request $request, int $id): Response
     {
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
+        $protocol = $protocolRepository->find($id);
 
         $form = $this->createForm(ProtocolType::class, $protocol);
         $form->handleRequest($request);
@@ -96,8 +101,10 @@ class ProtocolController extends Controller
      * @param Protocol $protocol
      * @return Response
      */
-    public function delete(Request $request, Protocol $protocol): Response
+    public function delete(ProtocolRepository $protocolRepository, Request $request, int $id): Response
     {
+        $protocol = $protocolRepository->find($id);
+
         if ($this->isCsrfTokenValid('delete'.$protocol->getId(), $request->request->get('_token'))) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($protocol);

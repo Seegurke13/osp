@@ -1,0 +1,34 @@
+<table class="protocol-table table">
+    <thead>
+    <tr>
+        <td>Titel</td>
+        <td>Tags</td>
+        <td>Ersteller</td>
+        <td>Letzte Aenderung</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% if protocols | length == 0 %}
+        <tr>
+            <td colspan="4">Keine Protokolle gefunden</td>
+        </tr>
+    {% endif %}
+    {% for protocol in protocols %}
+        <tr>
+            <td><a href="{{ path('protocol_show', {'id': protocol.getId()}) }}">{{ protocol.getName() }}</a></td>
+            <td>
+                {% for tag in protocol.getTags() %}
+                    <span class="protocol-tag">{{ tag.getName() }}</span>
+                {% endfor %}
+            </td>
+            <td>{{ protocol.getCreator() }}</td>
+            <td></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="4">Protokolle: {{ protocols | length }}</td>
+    </tr>
+    </tfoot>
+</table>

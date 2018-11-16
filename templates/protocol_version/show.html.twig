@@ -1,12 +1,12 @@
-{% extends 'base.html.twig' %}
+{% extends 'page.html.twig' %}
 
 {% block title %}ProtocolVersion{% endblock %}
 
-{% block body %}
+{% block content %}
     <h1>ProtocolVersion</h1>
 
     <table class="table">
-        <tbody>
+        <tcontent>
             <tr>
                 <th>Id</th>
                 <td>{{ protocol_version.id }}</td>
@@ -19,7 +19,7 @@
                 <th>ChangeAt</th>
                 <td>{{ protocol_version.changeAt ? protocol_version.changeAt|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
-        </tbody>
+        </tcontent>
     </table>
 
     <a href="{{ path('protocol_version_index') }}">back to list</a>

@@ -1,12 +1,12 @@
 {{ form_start(form) }}
-    <div id="template-protocolVersion" class="template">
-        {{ form_widget(form.protocolContent.vars.prototype) | e }}
+    <div id="template-protocolContent" class="template">
+        {{ form_widget(form.protocolContent.vars.prototype) | raw }}
     </div>
     <div id="template-tag" class="template">
-        {{ form_widget(form.tags.vars.prototype) | e }}
+        {{ form_widget(form.tags.vars.prototype) | raw }}
     </div>
     <div id="template-participants" class="template">
-        {{ form_widget(form.participants.vars.prototype) | e }}
+        {{ form_widget(form.participants.vars.prototype) | raw }}
     </div>
 
     {{ form_widget(form) }}

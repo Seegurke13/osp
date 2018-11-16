@@ -3,7 +3,11 @@
 namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\JoinTable;
+use Symfony\Component\Yaml\Tests\A;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProtocolRepository")
@@ -34,19 +38,28 @@ class Protocol
     private $creator;
 
     /**
-     * @var array
+     * @ORM\ManyToMany(targetEntity="Participant", inversedBy="protocols", cascade={"persist"})
+     * @JoinTable(name="protocol_participants",
+     *      joinColumns={@JoinColumn(name="protocol_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@JoinColumn(name="participant_id", referencedColumnName="id")}
+     *      )
+     * @var Collection
      */
     private $participants;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Tag", inversedBy="protocols")
+     * @ORM\ManyToMany(targetEntity="Tag", inversedBy="protocols",cascade={"persist"})
+     * @JoinTable(name="protocol_tags",
+     *      joinColumns={@JoinColumn(name="protocol_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@JoinColumn(name="tag_id", referencedColumnName="id")}
+     *      )
      * @var array
      */
     private $tags;
 
     /**
      * @var array
-     * @ORM\OneToMany(targetEntity="ProtocolContent", mappedBy="protocol")
+     * @ORM\OneToMany(targetEntity="ProtocolContent", mappedBy="protocol",cascade={"persist"})
      */
     private $protocolContent;
 
@@ -89,7 +102,7 @@ class Protocol
     /**
      * @return ArrayCollection
      */
-    public function getTags(): ArrayCollection
+    public function getTags(): ?Collection
     {
         return $this->tags;
     }
@@ -97,23 +110,38 @@ class Protocol
     /**
      * @param ArrayCollection $tags
      */
-    public function setTags(ArrayCollection $tags): void
+    public function setTags(Collection $tags): void
     {
         $this->tags = $tags;
+    }
+
+    public function hasTag(Tag $tag): bool
+    {
+        return $this->tags->contains($tag);
+    }
+
+    public function removeTag(Tag $tag)
+    {
+        $this->tags->removeElement($tag);
+    }
+
+    public function addTag(Tag $tag)
+    {
+        $this->tags->add($tag);
     }
 
     /**
      * @return array
      */
-    public function getParticipants(): ArrayCollection
+    public function getParticipants(): Collection
     {
-        return $this->participants;
+        return ($this->participants !== null ? $this->participants : new ArrayCollection());
     }
 
     /**
      * @param array $participants
      */
-    public function setParticipants(ArrayCollection $participants): void
+    public function setParticipants(Collection $participants): void
     {
         $this->participants = $participants;
     }
@@ -121,7 +149,7 @@ class Protocol
     /**
      * @return int
      */
-    public function getCreator(): int
+    public function getCreator(): string
     {
         return $this->creator;
     }
@@ -129,7 +157,7 @@ class Protocol
     /**
      * @param int $creator
      */
-    public function setCreator(int $creator): void
+    public function setCreator(string $creator): void
     {
         $this->creator = $creator;
     }
@@ -137,7 +165,7 @@ class Protocol
     /**
      * @return array
      */
-    public function getProtocolContent(): ArrayCollection
+    public function getProtocolContent(): ?Collection
     {
         return $this->protocolContent;
     }
@@ -145,7 +173,7 @@ class Protocol
     /**
      * @param array $protocolContent
      */
-    public function setProtocolContent(ArrayCollection $protocolContent): void
+    public function setProtocolContent(Collection $protocolContent): void
     {
         $this->protocolContent = $protocolContent;
     }

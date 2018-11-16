@@ -1,8 +1,8 @@
-{% extends 'base.html.twig' %}
+{% extends 'page.html.twig' %}
 
 {% block title %}Protocol index{% endblock %}
 
-{% block body %}
+{% block content %}
     <h1>Protocol index</h1>
 
     <table class="table">
@@ -14,7 +14,7 @@
                 <th>actions</th>
             </tr>
         </thead>
-        <tbody>
+        <tcontent>
         {% for protocol in protocols %}
             <tr>
                 <td>{{ protocol.id }}</td>
@@ -30,7 +30,7 @@
                 <td colspan="4">no records found</td>
             </tr>
         {% endfor %}
-        </tbody>
+        </tcontent>
     </table>
 
     <a href="{{ path('protocol_new') }}">Create new</a>
