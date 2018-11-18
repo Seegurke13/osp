@@ -19,9 +19,14 @@ class ParticipantRepository extends ServiceEntityRepository
         parent::__construct($registry, Participant::class);
     }
 
+    public function save(Participant $participant)
+    {
+        $this->getEntityManager()->persist($participant);
+        $this->getEntityManager()->flush();
+    }
+
     public function findByUserId(string $string)
     {
-        $string = 'ich';
         return $this->findOneBy(['name' => $string]);
     }
 

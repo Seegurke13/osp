@@ -21,7 +21,15 @@ class PdfController extends Controller
     }
 
     /**
-     * @Route("/pdf/create")
+     * @Route("/pdf/create/{id}", name="pdf_create", methods={"GET"})
+     */
+    public function createOnePdf(int $id)
+    {
+
+    }
+
+    /**
+     * @Route("/pdf/create", methods={"POST"})
      */
     public function createPdf()
     {

@@ -38,13 +38,21 @@ class ProtocolRepository extends ServiceEntityRepository
 
     public function findProtocolsByTagAndParticipant(\App\Entity\Tag $tagE, Participant $participant)
     {
-        $qb = $this->createQueryBuilder('protocol')
-            ->innerJoin('protocol.tags', 'tag', 'WITH', 'tag.name = :name')
-            ->innerJoin('protocol.participants', 'participant', 'WITH', 'participant = :participant')
-            ->setParameter('name', $tagE->getName())
-            ->setParameter('participant', $participant);
+//        $qb = $this->createQueryBuilder('protocol')
+//            ->innerJoin('protocol.tags', 'tag', 'WITH', 'tag.name = :name')
+//            ->innerJoin('protocol.participants', 'participant', 'WITH', 'participant = :participant')
+//            ->setParameter('name', $tagE->getName())
+//            ->setParameter('participant', $participant);
 
-        return $qb->getQuery()->execute();
+        $qb = $this->createQueryBuilder('p');
+        $qb = $qb->Orwhere(':participant MEMBER OF p.participants')
+            ->orWhere('p.creator = :participant')
+            ->andWhere(':tag MEMBER OF p.tags')
+            ->orderBy('p.createAt')
+            ->setParameters(array('participant' => $participant, 'tag' => $tagE))
+            ->getQuery();
+
+        return $qb->execute();
     }
 
     // /**

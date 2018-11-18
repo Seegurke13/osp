@@ -10,22 +10,29 @@ namespace App\Controller;
 
 
 use App\Repository\ProtocolRepository;
+use App\Service\ProtocolService;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 class IndexController extends Controller
 {
-    public function __construct()
+    /**
+     * @var ProtocolService
+     */
+    private $protocolService;
+
+    public function __construct(ProtocolService $protocolService)
     {
+        $this->protocolService = $protocolService;
     }
 
     /**
      * @Route("/", name="index")
      */
-    public function indexAction(ProtocolRepository $protocolRepository)
+    public function indexAction()
     {
-        $protocols = $protocolRepository->findAll();
+        $protocols = $this->protocolService->getProtocols();
 
         return $this->render('index/index.html.twig', ['protocols' => $protocols]);
     }

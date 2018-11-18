@@ -56,7 +56,7 @@ class TagService
                                 ProtocolService $protocolService,
                                 TagRepository $tagRepository,
                                 UrlGeneratorInterface $router,
-ProtocolRepository $protocolRepository)
+                                ProtocolRepository $protocolRepository)
     {
         $this->tagRepository = $tagRepository;
         $this->router = $router;
@@ -72,12 +72,27 @@ ProtocolRepository $protocolRepository)
         if ($user === null) {
             return [];
         }
-        $parcipant = $this->participantRepository->findByUserId($user);
-        $protocols = $parcipant->getProtocols();
-        $tags = [];
+        $participant = $this->participantRepository->findByUserId($user);
+        if ($participant === null) {
+            return [];
+        }
 
+        $qb = $this->protocolRepository->createQueryBuilder('p');
+        $query = $qb->Orwhere(':participant MEMBER OF p.participants')
+            ->orWhere('p.creator = :participant')
+            ->setParameters(array('participant' => $participant))
+            ->orderBy('p.createAt')
+            ->getQuery();
+
+
+        $tags = new ArrayCollection();
+        $protocols = $query->getResult();
         foreach ($protocols as $protocol) {
-            $tags = array_merge($tags, $protocol->getTags()->toArray());
+            foreach ($protocol->getTags()->toArray() as $tag) {
+                if (!$tags->contains($tag)) {
+                    $tags->add($tag);
+                }
+            }
         }
 
         $tagModels = [];
@@ -96,5 +111,15 @@ ProtocolRepository $protocolRepository)
     public function getTagFromTagName(string $tag): ?Tag
     {
         return $this->tagRepository->findOneBy(['name' => $tag]);
+    }
+
+    public function findTag(Tag $tag): Tag
+    {
+        $tagDb = $this->getTagFromTagName($tag->getName());
+        if ($tagDb !== null) {
+            return $tagDb;
+        }
+
+        return $tag;
     }
 }

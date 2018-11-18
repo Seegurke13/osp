@@ -22,7 +22,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-2 header-image-container">
-                <img class="header-image" src="/img/gso-logo.jpg" alt="logo">
+                <a href="/"><img class="header-image" src="/img/gso-logo.jpg" alt="logo"></a>
             </div>
             <div class="col-md-6 header-title">
                 <h1 class="h1">Protokollverwaltung</h1>
@@ -30,7 +30,7 @@
             <div class="col-md-4">
                 {% if app.user %}
                     <div class="action-container">
-                        <form class="search-action" role="search">
+                        <form class="search-action" enctype="application/x-www-form-urlencoded" action="{{ path('search') }}" role="search">
                             <div class="input-group">
                                 <input name="search" id="search-action-input" type="text" placeholder="Search">
                                 <button type="submit" class="btn btn-info">

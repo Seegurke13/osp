@@ -1,5 +1,15 @@
 {% extends 'page.html.twig' %}
 
+{#{% block form_row %}#}
+
+    {#<div class="form-group {{ form.vars.attr.class }}">#}
+        {#{{ form_label(form) }}#}
+        {#{{ form_errors(form) }}#}
+        {#{{ form_widget(form) }}#}
+    {#</div>#}
+
+{#{% endblock %}#}
+
 {% block title %}Edit Protocol{% endblock %}
 
 {% block content %}
@@ -8,6 +18,4 @@
     {{ include('protocol/_form.html.twig', {'button_label': 'Update'}) }}
 
     <a href="{{ path('protocol_index') }}">back to list</a>
-
-    {{ include('protocol/_delete_form.html.twig') }}
 {% endblock %}

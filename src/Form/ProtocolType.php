@@ -35,6 +35,12 @@ class ProtocolType extends AbstractType
                 'entry_type' => ParticipantType::class,
                 'allow_add' => true,
                 'allow_delete' => true,
+                'by_reference' => false,
+                'label' => 'Teilnehmer',
+                'attr' => [
+                    'class' => 'form-participants'
+                ],
+                'entry_options' => array('label' => false),
             ))
         ;
 
@@ -42,7 +48,12 @@ class ProtocolType extends AbstractType
             'entry_type' => TagType::class,
             'allow_add' => true,
             'allow_delete' => true,
-            'label' => 'Tags'
+            'label' => 'Tags',
+            'by_reference' => false,
+            'attr' => [
+                'class' => 'form-tags'
+            ],
+            'entry_options' => array('label' => false)
         ));
 
         $builder->add('protocolContent', CollectionType::class, array(
@@ -52,7 +63,9 @@ class ProtocolType extends AbstractType
             'prototype' => true,
             'label' => 'Inhalt',
             'entry_options' => array('label' => false),
-            'by_reference' => false,
+            'attr' => [
+                'class' => 'form-protocolContent'
+            ],
         ));
 
 //        $builder->setDataMapper($this);

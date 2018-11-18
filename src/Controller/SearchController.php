@@ -9,9 +9,11 @@
 namespace App\Controller;
 
 
+use App\Form\SearchType;
 use App\Service\ProtocolService;
 use App\Service\TagService;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Security;
 
@@ -38,11 +40,24 @@ class SearchController extends Controller
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/search", name="search", methods={"GET"})
+     * @Route("/search", name="search")
      */
-    public function searchAction()
+    public function searchAction(Request $request)
     {
-        return $this->render('search/search.html.twig', []);
+        $searchterm = $request->query->get('search', '');
+
+        $form = $this->createForm(SearchType::class);
+        $form->setData(['searchterm' => $searchterm]);
+        $form->handleRequest($request);
+        $view = $form->createView();
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $searchterm = $form->getData()['searchterm'];
+        }
+
+        $protcols = $this->protocolService->getProtocolsBySearchTerm($searchterm);
+
+        return $this->render('search/search.html.twig', ['searchform' => $view, 'protocols' => $protcols]);
     }
 
     /**
@@ -52,17 +67,12 @@ class SearchController extends Controller
     public function searchTagAction(string $tag)
     {
         $tagE = $this->tagService->getTagFromTagName($tag);
-        $protocols = $this->protocolService->getProtocolsForTag($tagE);
+        $protocols = [];
+        if ($tagE !== null)
+        {
+            $protocols = $this->protocolService->getProtocolsForTag($tagE);
+        }
 
         return $this->render('index/index.html.twig', ['protocols' => $protocols]);
-    }
-
-    /**
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     * @Route("/search", name="search_ajax", methods={"POST"})
-     */
-    public function searchAjaxAction()
-    {
-        return $this->json([]);
     }
 }

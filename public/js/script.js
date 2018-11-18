@@ -1,16 +1,19 @@
 $(document).ready(function () {
    var template_tags = $('#template-tag');
+   template_tags.attr('id', '');
    var template_participants = $('#template-participants');
+   template_participants.attr('id', '');
    var template_protocolContent = $('#template-protocolContent');
+   template_protocolContent.attr('id', '');
 
    //$('#template-participants').html(
    var button_1 = $('<div class="btn btn-info btn-sm rounded"><i class="icofont-ui-add"></i></div>');
    var button_2 = $('<div class="btn btn-info btn-sm rounded"><i class="icofont-ui-add"></i></div>');
    var button_3 = $('<div class="btn btn-info btn-sm rounded"><i class="icofont-ui-add"></i></div>');
 
-   var participnatContainer = $('#protocol_participants').html(button_1);
-   var tagContainer = $('#protocol_tags').html(button_2);
-   var contentContainer = $('#protocol_protocolContent').html(button_3);
+   var participnatContainer = $('#protocol_participants').prepend(button_1);
+   var tagContainer = $('#protocol_tags').prepend(button_2);
+   var contentContainer = $('#protocol_protocolContent').prepend(button_3);
 
    template_tags.detach();
    template_protocolContent.detach();
@@ -35,10 +38,28 @@ $(document).ready(function () {
         elem.removeClass('template');
         button_3.parent().append(elem);
     });
-    $('#test').autocomplete({
-        source: ['test', 'aaa']
+
+    var table = $('.datatable').DataTable();
+
+    $('.datatable tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            $(this).addClass('selected');
+        }
+    } );
+
+    $('#action-to-pdf').click(function () {
+        var protocols = [];
+        $('.protocol-table tbody').find('tr.selected').each((index, item) => {
+            var protocolId = parseInt($(item).attr('id').replace('protocol-id-', ''));
+            protocols.push(protocolId);
+        })
+        console.log(protocols);
     });
 });
+
 function addAutocomplete(element, url) {
     var inputs = element.find('input');
     inputs.each(function (index, input) {
@@ -48,8 +69,4 @@ function addAutocomplete(element, url) {
             $(input).addClass('autocomplete');
         }
     });
-    // input.autocomplete({
-    //     source: ['test', 'aaa']
-    // });
-    // input.attr('autocomplete', 'off');
 };

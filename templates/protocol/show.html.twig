@@ -19,6 +19,40 @@
                 <th>CreateAt</th>
                 <td>{{ protocol.createAt ? protocol.createAt|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
+            <tr>
+                <th>Tags</th>
+                <td>
+                    <ul>
+                        {% for tag in protocol.getTags() %}
+                            <li>
+                                <span class="tag">{{ tag.getName() }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Participants</th>
+                <td>
+                    <ul>
+                        {% for participant in protocol.getParticipants() %}
+                            <li>
+                                <span class="tag">{{ participant.getName() }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% for protocolContent in protocol.getProtocolContent() %}
+                <tr>
+                    <td>
+                        {{ protocolContent.getName() }}
+                    </td>
+                    <td>
+                        {{ protocolContent.getResult() }}
+                    </td>
+                </tr>
+            {% endfor %}
         </content>
     </table>
 

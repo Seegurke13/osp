@@ -1,0 +1,11 @@
+{% extends 'page.html.twig' %}
+
+{% block content %}
+    <div class="searchform">
+        {{ form_start(searchform) }}
+        {{ form_end(searchform) }}
+    </div>
+    <div class="results">
+        {% include 'table.html.twig' with {'protcols': protocols} %}
+    </div>
+{% endblock %}

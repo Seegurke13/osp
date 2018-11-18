@@ -4,10 +4,10 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\JoinColumn;
 use Doctrine\ORM\Mapping\JoinTable;
-use Symfony\Component\Yaml\Tests\A;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProtocolRepository")
@@ -32,8 +32,8 @@ class Protocol
     private $createAt;
 
     /**
-     * @var string
-     * @ORM\Column(type="string")
+     * @var Participant
+     * @ORM\ManyToOne(targetEntity="App\Entity\Participant")
      */
     private $creator;
 
@@ -99,17 +99,11 @@ class Protocol
         return $this;
     }
 
-    /**
-     * @return ArrayCollection
-     */
     public function getTags(): ?Collection
     {
         return $this->tags;
     }
 
-    /**
-     * @param ArrayCollection $tags
-     */
     public function setTags(Collection $tags): void
     {
         $this->tags = $tags;
@@ -130,49 +124,46 @@ class Protocol
         $this->tags->add($tag);
     }
 
-    /**
-     * @return array
-     */
     public function getParticipants(): Collection
     {
         return ($this->participants !== null ? $this->participants : new ArrayCollection());
     }
 
-    /**
-     * @param array $participants
-     */
     public function setParticipants(Collection $participants): void
     {
         $this->participants = $participants;
     }
 
-    /**
-     * @return int
-     */
-    public function getCreator(): string
+    public function addParticipant(Participant $participant)
+    {
+        $this->participants->add($participant);
+    }
+
+    public function hasParticipant(Participant $participant): bool
+    {
+        return $this->participants->contains($participant);
+    }
+
+    public function removeParticipant(Participant $participant)
+    {
+        $this->participants->removeElement($participant);
+    }
+
+    public function getCreator(): Participant
     {
         return $this->creator;
     }
 
-    /**
-     * @param int $creator
-     */
-    public function setCreator(string $creator): void
+    public function setCreator(Participant $creator): void
     {
         $this->creator = $creator;
     }
 
-    /**
-     * @return array
-     */
     public function getProtocolContent(): ?Collection
     {
         return $this->protocolContent;
     }
 
-    /**
-     * @param array $protocolContent
-     */
     public function setProtocolContent(Collection $protocolContent): void
     {
         $this->protocolContent = $protocolContent;
@@ -180,6 +171,6 @@ class Protocol
 
     public function addProtocolContent(ProtocolContent $protocolContent)
     {
-        $this->protocolContent[] = $protocolContent;
+        $this->protocolContent->add($protocolContent);
     }
 }

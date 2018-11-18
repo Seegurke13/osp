@@ -1,10 +1,11 @@
-<table class="protocol-table table">
+<table class="protocol-table table datatable">
     <thead>
     <tr>
         <td>Titel</td>
         <td>Tags</td>
         <td>Ersteller</td>
-        <td>Letzte Aenderung</td>
+        <td>Erstellt am</td>
+        <td>Aktionen</td>
     </tr>
     </thead>
     <tbody>
@@ -14,19 +15,24 @@
         </tr>
     {% endif %}
     {% for protocol in protocols %}
-        <tr>
+        <tr class="protocol-row" id="protocol-id-{{ protocol.getId() }}">
             <td><a href="{{ path('protocol_show', {'id': protocol.getId()}) }}">{{ protocol.getName() }}</a></td>
             <td>
                 {% for tag in protocol.getTags() %}
-                    <span class="protocol-tag">{{ tag.getName() }}</span>
+                    <span class="tag">{{ tag.getName() }}</span>
                 {% endfor %}
             </td>
-            <td>{{ protocol.getCreator() }}</td>
-            <td></td>
+            <td>{{ protocol.getCreator().getName() }}</td>
+            <td>{{ protocol.getCreateAt()|date("m/d/Y") }}</td>
+            <td><a href="{{ path('protocol_show', {'id':protocol.getId()}) }}">Show</a><a href="{{ path('protocol_edit', {'id':protocol.getId()}) }}">Edit</a><a target="_blank" href="{{ path('pdf_create', {'id':protocol.getId()}) }}">Pdf</a></td>
         </tr>
     {% endfor %}
     </tbody>
     <tfoot>
+    <tr>
+        <td colspan="4">
+            <span id="action-to-pdf" class="btn btn-info">Ausgewaehlte als PDF speichern</span>
+        </td>
     <tr>
         <td colspan="4">Protokolle: {{ protocols | length }}</td>
     </tr>

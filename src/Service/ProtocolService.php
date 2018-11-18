@@ -11,11 +11,13 @@ namespace App\Service;
 
 use App\Entity\Participant;
 use App\Entity\Protocol;
+use App\Entity\ProtocolContent;
 use App\Entity\Tag;
 use App\Repository\ParticipantRepository;
 use App\Repository\ProtocolRepository;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Security\Core\Security;
 
@@ -37,20 +39,22 @@ class ProtocolService
      * @var EntityManagerInterface
      */
     private $entityManager;
+    /**
+     * @var ParticipantService
+     */
+    private $participantService;
 
     public function __construct(ParticipantRepository $participantRepository,
                                 ProtocolRepository $protocolRepository,
                                 Security $security,
-                                EntityManagerInterface $entityManager)
+                                EntityManagerInterface $entityManager,
+                                ParticipantService $participantService)
     {
         $this->protocolRepository = $protocolRepository;
         $this->participantRepository = $participantRepository;
         $this->security = $security;
         $this->entityManager = $entityManager;
-    }
-
-    public function getProtocolById(int $id)
-    {
+        $this->participantService = $participantService;
     }
 
     public function getProtocolsByParcipier(\App\Entity\Participant $parcipant)
@@ -60,20 +64,53 @@ class ProtocolService
 
     public function getProtocolsForTag(\App\Entity\Tag $tagE)
     {
-        $user =  $this->security->getUser();
-        $participant = $this->participantRepository->findByUserId($user->getUsername());
+        $participant = $this->participantService->getActualParticipant();
 
-//        $return = [];
-//        $protocols = $participant->getProtocols();
-//
-//        /** @var Protocol $protocol */
-//        foreach ($protocols as $protocol) {
-//            if ($protocol->hasTag($tagE) === true) {
-//                $return[] = $protocol;
-//            }
-//        }
         $protocols = $this->protocolRepository->findProtocolsByTagAndParticipant($tagE, $participant);
 
         return $protocols;
+    }
+
+    public function getProtocols()
+    {
+        $participant = $this->participantService->getActualParticipant();
+
+        $qb = $this->protocolRepository->createQueryBuilder('p');
+        $query = $qb->Orwhere(':participant MEMBER OF p.participants')
+            ->orWhere('p.creator = :participant')
+            ->setParameters(array('participant' => $participant))
+            ->orderBy('p.createAt')
+            ->getQuery();
+
+        $result = $query->getResult();
+
+         return $result;
+    }
+
+    public function getProtocolsBySearchTerm(string $searchterm)
+    {
+        $participant = $this->participantService->getActualParticipant();
+
+        $qb = $this->protocolRepository->createQueryBuilder('p');
+
+        $criteria = Criteria::create();
+        $criteria->orWhere(Criteria::expr()->contains('pc.name', ':searchterm'));
+        $criteria->orWhere(Criteria::expr()->contains('pc.result', ':searchterm'));
+
+        $query = $qb->Orwhere(':participant MEMBER OF p.participants')
+            ->orWhere('p.creator = :participant')
+            ->join(ProtocolContent::class, 'pc')
+            ->addCriteria($criteria)
+            ->setParameters([
+                'participant' => $participant,
+                'pc_result' => '%'.$searchterm.'%',
+                'pc_name' => '%'.$searchterm.'%',
+            ])
+            ->orderBy('p.createAt')
+            ->getQuery();
+
+        $result = $query->getResult();
+
+        return $result;
     }
 }
